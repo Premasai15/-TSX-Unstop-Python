@@ -51,9 +51,15 @@ This is my Python-based project submitted for the Unstop TSX challenge.
 
 Premasai Chowdary
 
+## Live Project Demo
+
+Check out the live version of this project here:  
+[https://tsx-unstop-python-gh6a.onrender.com](https://tsx-unstop-python-gh6a.onrender.com)
+
+
 ## ⚙️ How to Run Locally
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/Premasai15/-Tsx-Unstop-Python.git
+   cd -Tsx-Unstop-Python
