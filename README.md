@@ -32,9 +32,24 @@ This is a personal **portfolio web application** built using **Python and Flask*
 ### 📋 Task Manager Project (Example)
 ![Task Manager](static/images/task-manager.jpg)
 
-> *(Make sure these image paths exist in your `static/images/` folder)*
+### 📋 Event Management Project (Example)
+![Event Manager](static/images/event-management.jpg)
+
 
 ---
+# TSX Unstop Python Project
+
+This is my Python-based project submitted for the Unstop TSX challenge.
+
+## Features
+
+- Built using Python 🐍
+- Clean folder structure
+- Easy to navigate
+
+## Author
+
+Premasai Chowdary
 
 ## ⚙️ How to Run Locally
 
