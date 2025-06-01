@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premasai | Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header>
+    <h1>G.R.Premasai Chowdary</h1>
+    <p>Full-Stack Developer | Python & Flask | UI/UX Designer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="{{ url_for('static', filename='images/premapic.jpg') }}" alt="Premasai" style="width:150px; border-radius:50%;" />
+    <p>I’m a passionate full-stack developer who loves turning ideas into real, interactive web applications. I enjoy working with Python, JavaScript, Flask, and modern frontend technologies.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Flask</li>
+      <li>Git & GitHub</li>
+      <li>MySQL</li>
+      <li>Bootstrap</li>
+      <li>REST APIs</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <h3>Web Developer Intern - TechSoft</h3>
+      <p><strong>Jan 2024 – Jun 2024</strong></p>
+      <p>Worked on a real-time dashboard using Flask and React.js. Developed features like authentication, API integration, and responsive design.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Freelance Web Designer</h3>
+      <p><strong>2023 – Present</strong></p>
+      <p>Designed and built websites for local businesses using HTML, CSS, and JavaScript. Focused on speed, SEO, and mobile responsiveness.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="react-projects-root"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: p.s.chowdary15@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/g-r-premasai-chowdary-109884333/">linkedin.com/in/Premasai Chowdary</a></p>
+    <p>GitHub: <a href="https://github.com/Premasai15">github.com/Premasai Chowdary</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Premasai. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <!-- React & Babel CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const projects = [
+      {
+        title: "Personal Portfolio",
+        description: "A responsive portfolio website to showcase my skills, resume, and project work.",
+        img: "{{ url_for('static', filename='images/portfolio.jpg') }}"
+      },
+      {
+        title: "Task Manager",
+        description: "A to-do app with Flask backend, login system, and database integration.",
+        img: "{{ url_for('static', filename='images/task-manager.jpg') }}"
+      },
+      {
+        title: "Event Management System",
+        description: "A digital platform designed to streamline events by handling registrations, scheduling, and coordination.",
+        img: "{{ url_for('static', filename='images/event-management.jpg') }}"
+      }
+    ];
+
+    function Project({ title, description, img }) {
+      return (
+        <div className="project">
+          <h3>{title}</h3>
+          <img src={img} alt={`${title} screenshot`} />
+          <p>{description}</p>
+        </div>
+      );
+    }
+
+    function ProjectsList() {
+      return (
+        <>
+          {projects.map((proj, i) => (
+            <Project key={i} {...proj} />
+          ))}
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("react-projects-root")).render(<ProjectsList />);
+  </script>
+
+</body>
+</html>
+
+
+
+
+
